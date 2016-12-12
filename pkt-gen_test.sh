@@ -12,7 +12,7 @@ echo "src_mac 08:00:27:4c:e6:6f" > /proc/net/pktgen/eth1
 echo "dst 192.168.31.101"              > /proc/net/pktgen/eth1
 echo "dst_mac 08:00:27:c6:66:16" > /proc/net/pktgen/eth1
 echo "start"                     > /proc/net/pktgen/pgctrl
-echo -n $i   |tee -a  /home/vagrant/result_pktgen
-tail  /proc/net/pktgen/eth1 -n 1 |tee -a /home/vagrant/result_pktgen
+echo -n $i   |tee -a .
+tail  /proc/net/pktgen/eth1 -n 1 |tee -a .
 sleep 10
 done
